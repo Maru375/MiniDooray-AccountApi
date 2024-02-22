@@ -1,14 +1,16 @@
 package com.nhnacademy.minidooray.accountapi.service;
 
-import com.nhnacademy.minidooray.accountapi.domain.Member;
+import com.nhnacademy.minidooray.accountapi.entity.Member;
 import com.nhnacademy.minidooray.accountapi.repository.MemberRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class DoorayMemberService implements MemberService{
+@Service
+public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
 
-    public DoorayMemberService(MemberRepository memberRepository) {
+    public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
@@ -19,7 +21,7 @@ public class DoorayMemberService implements MemberService{
 
     @Override
     public Member getMember(String id) {
-        return memberRepository.getById(id);
+        return memberRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -34,4 +36,8 @@ public class DoorayMemberService implements MemberService{
     public void deleteMember(String id) {
         memberRepository.deleteById(id);
     }
+
+
+
+
 }

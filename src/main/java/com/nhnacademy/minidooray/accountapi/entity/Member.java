@@ -1,4 +1,4 @@
-package com.nhnacademy.minidooray.accountapi.domain;
+package com.nhnacademy.minidooray.accountapi.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -24,15 +24,12 @@ public class Member {
 
     private String name;
 
-    @JoinColumn(name = "state")
-    @OneToOne
-    private  MemeberState memeberState;
-
-    public Member(String memberId, String email, String password, String name, MemeberState memeberState){
+    private String state;
+    public Member(String memberId, String email, String password, String name, String memeberState){
         this.memberId = memberId;
         this.email = email;
         this.password = password;
         this.name = name;
-        this.memeberState = memeberState;
+        this.state = memeberState;
     }
 }

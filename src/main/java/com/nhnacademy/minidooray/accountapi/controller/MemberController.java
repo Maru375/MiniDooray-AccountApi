@@ -1,6 +1,6 @@
 package com.nhnacademy.minidooray.accountapi.controller;
 
-import com.nhnacademy.minidooray.accountapi.domain.Member;
+import com.nhnacademy.minidooray.accountapi.entity.Member;
 import com.nhnacademy.minidooray.accountapi.service.MemberService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -37,4 +37,5 @@ public class MemberController {
         memberService.deleteMember(id);
         return "{\"id\"delete :\"OK\"}";
     }
+
 }
