@@ -1,9 +1,6 @@
 package com.nhnacademy.minidooray.accountapi.entity;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,6 +8,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 @EqualsAndHashCode
 @Table(name = "members")
 public class Member {
@@ -24,12 +22,13 @@ public class Member {
 
     private String name;
 
-    private String state;
-    public Member(String memberId, String email, String password, String name, String memeberState){
+    @Enumerated(EnumType.STRING)
+    private MemberState state;
+    public Member(String memberId, String email, String password, String name, MemberState state){
         this.memberId = memberId;
         this.email = email;
         this.password = password;
         this.name = name;
-        this.state = memeberState;
+        this.state = state;
     }
 }

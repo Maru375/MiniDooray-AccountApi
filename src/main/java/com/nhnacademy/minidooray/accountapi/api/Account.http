@@ -1,0 +1,25 @@
+DELETE http://localhost:8080/accounts/hello
+Accept: application/json
+
+###
+GET http://localhost:8080/accounts/admin
+Accept: application/json
+
+###
+POST http://localhost:8080/accounts
+Content-Type: application/json
+
+{
+  "memberId": "hello",
+  "email": "hello@naver.com",
+  "password": "1234",
+  "name": "hello",
+  "state": "JOIN"
+}
+
+###
+GET http://localhost:8080/accounts/
+Accept: application/json
+
+###
+
