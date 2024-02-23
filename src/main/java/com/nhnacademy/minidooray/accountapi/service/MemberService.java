@@ -1,7 +1,6 @@
 package com.nhnacademy.minidooray.accountapi.service;
 
 import com.nhnacademy.minidooray.accountapi.domain.MemberDto;
-import com.nhnacademy.minidooray.accountapi.domain.MemberNameOnly;
 import com.nhnacademy.minidooray.accountapi.entity.Member;
 
 import java.util.List;

@@ -5,5 +5,4 @@ public enum MemberState {
     WITHDRAW,
     DORMANT
 
-
 }
