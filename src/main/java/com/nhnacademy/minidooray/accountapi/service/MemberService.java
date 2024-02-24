@@ -1,5 +1,6 @@
 package com.nhnacademy.minidooray.accountapi.service;
 
+import com.nhnacademy.minidooray.accountapi.domain.LoginMemberDto;
 import com.nhnacademy.minidooray.accountapi.domain.MemberDto;
 import com.nhnacademy.minidooray.accountapi.entity.Member;
 
@@ -14,4 +15,5 @@ public interface MemberService {
 
     void deleteMember(String id);
 
+    LoginMemberDto getLoginMember(String id);
 }
